@@ -1,10 +1,12 @@
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status
+
+from app.auth import CurrentUser, get_current_user
 
 router = APIRouter(prefix="/label", tags=["label"])
 
 
 @router.post("")
-def label_item() -> None:
+def label_item(user: CurrentUser = Depends(get_current_user)) -> None:
     # TODO: accept an uploaded image and return generated tags via
     # app/services/labeling.py once the custom vision model is ready.
     raise HTTPException(
