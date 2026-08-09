@@ -1,0 +1,45 @@
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# --- frontend (Next.js) ---
+frontend/node_modules/
+frontend/.pnp
+frontend/.pnp.*
+frontend/.yarn/*
+!frontend/.yarn/patches
+!frontend/.yarn/plugins
+!frontend/.yarn/releases
+!frontend/.yarn/versions
+frontend/coverage/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/**/*.pem
+frontend/**/npm-debug.log*
+frontend/**/yarn-debug.log*
+frontend/**/yarn-error.log*
+frontend/**/.pnpm-debug.log*
+frontend/.env*
+!frontend/.env*.example
+frontend/.vercel
+frontend/**/*.tsbuildinfo
+frontend/next-env.d.ts
+
+# --- backend (FastAPI / uv) ---
+backend/.venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.egg-info/
+backend/.env
+!backend/.env.example
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.ruff_cache/
+
+# Future custom vision model artifacts (weights are large — add DVC/LFS later)
+backend/models/*.pt
+backend/models/*.onnx
+backend/models/*.safetensors
+backend/models/checkpoints/
