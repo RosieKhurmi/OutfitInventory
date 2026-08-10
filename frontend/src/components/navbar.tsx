@@ -17,6 +17,9 @@ export async function Navbar() {
         <Link className="underline" href="/categories">
           Categories
         </Link>
+        <Link className="underline" href="/label">
+          Label
+        </Link>
       </nav>
       <div className="flex items-center gap-4 text-sm font-medium">
         {user ? (

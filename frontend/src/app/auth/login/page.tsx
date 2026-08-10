@@ -30,7 +30,7 @@ function LoginForm() {
       return;
     }
 
-    router.push(searchParams.get("next") ?? "/wardrobe");
+    router.push(searchParams.get("next") ?? "/items");
     router.refresh();
   }
 

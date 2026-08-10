@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Outfit Inventory",
-  description: "AI-powered clothing labeler and wardrobe browser.",
+  description: "AI-powered clothing labeler and item browser.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
