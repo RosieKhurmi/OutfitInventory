@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.routers import health, label, me
+from app.health import router as health_router
+from app.label.router import router as label_router
+from app.users.router import router as users_router
 
 app = FastAPI(title="Outfit Inventory API")
 
@@ -13,6 +15,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(health.router)
-app.include_router(label.router)
-app.include_router(me.router)
+app.include_router(health_router)
+app.include_router(label_router)
+app.include_router(users_router)
