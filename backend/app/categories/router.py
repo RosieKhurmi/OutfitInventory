@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from app.core.auth import CurrentUser, get_current_user
 from app.core.db import get_supabase
 
-router = APIRouter(tags=["categories"])
+router = APIRouter(prefix="/categories", tags=["categories"])
 
 
 class Category(BaseModel):
@@ -13,7 +13,7 @@ class Category(BaseModel):
     is_default: bool
 
 
-@router.get("/categories")
+@router.get("")
 def list_categories(
     user: CurrentUser = Depends(get_current_user),
 ) -> list[Category]:

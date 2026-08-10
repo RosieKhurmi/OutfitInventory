@@ -3,12 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { apiFetch } from "@/lib/api";
-
-interface Category {
-  id: string;
-  name: string;
-  is_default: boolean;
-}
+import type { Category } from "@/lib/types";
 
 export default function CategoriesPage() {
   const [categories, setCategories] = useState<Category[] | null>(null);
